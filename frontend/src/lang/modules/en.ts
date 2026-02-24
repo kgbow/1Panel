@@ -165,7 +165,7 @@ const message = {
             createSuccess: 'Created successfully',
             updateSuccess: 'Updated successfully',
             uploadSuccess: 'Uploaded successfully',
-            operateConfirm: 'If you are sure about the operation, please input it manually : ',
+            operateConfirm: 'If you are sure about the operation, please input it manually: ',
             inputOrSelect: 'Please select or enter',
             copyFailed: 'Failed to copy',
             operatorHelper: `The operation "{1}" will be performed on "{0}" and can't be undone. Do you want to continue?`,
@@ -219,7 +219,7 @@ const message = {
                 'In order to better protect your legitimate rights and interests, please read and agree to the following agreement &laquo; <a href = "https://www.fit2cloud.com/legal/licenses.html" target = "_blank" > Community License Agreement </a> &raquo;',
             passkeyFailed: 'Passkey login failed, please try again',
             passkeyNotSupported:
-                'Current browser or environment does not support passkeys, please confirm you have bound the domain name and enabled the panel SSL, and used a trusted certificate when accessing',
+                'Current browser or environment does not support passkeys, please confirm you have bound a domain name and are accessing through HTTPS',
             passkeyToPassword: 'Have trouble using a passkey? Use password instead',
         },
         rule: {
@@ -713,6 +713,8 @@ const message = {
             feishuSaveSuccess: 'Saved successfully',
             pairingCodeRequired: 'Please enter pairing code',
             pairingApproveSuccess: 'Pairing approved successfully',
+            customModelHelper: 'For custom model accounts, model names must start with custom/.',
+            customProviderHelper: 'Custom model providers do not validate whether the account is available.',
         },
         model: {
             model: 'Models',
@@ -1362,9 +1364,11 @@ const message = {
         lineHeight: 'Line Height',
         letterSpacing: 'Letter Spacing',
         fontSize: 'Font Size',
-        fontFamily: 'Custom Font',
-        fontFamilyHelper:
-            'Leave empty to use default fonts. If you enter a custom font name, ensure the font is installed on your local system, otherwise the default font will be used',
+        fontFamily: 'Font Set',
+        fontFamilySupportHelper:
+            'Select or input fonts. Actual rendering depends on fonts installed on the client OS/browser. If empty, the default font is used.',
+        backgroundColor: 'Background Color',
+        foregroundColor: 'Foreground Color',
         cursorBlink: 'Cursor Blink',
         cursorStyle: 'Cursor Style',
         cursorUnderline: 'Underline',
@@ -1626,9 +1630,9 @@ const message = {
         ownerHelper:
             'The default user of the PHP operating environment: the user group is 1000:1000, it is normal that the users inside and outside the container show inconsistencies',
         searchHelper: 'Support wildcards such as *',
-        uploadFailed: '[{0}] File upload file',
-        fileUploadStart: 'Uploading [{0}]....',
-        currentSelect: 'Current select: ',
+        uploadFailed: '[{0}] File upload failed',
+        fileUploadStart: 'Uploading [{0}]...',
+        currentSelect: 'Current selection: ',
         unsupportedType: 'Unsupported file type',
         deleteHelper:
             'Are you sure you want to delete the following files? By default, it will enter the recycle bin after deletion',
@@ -1982,8 +1986,12 @@ const message = {
         safe: 'Security',
         passkey: 'Passkey',
         passkeyManage: 'Manage',
+        passkeyKeyManagement: 'Key Management',
         passkeyHelper: 'For quick login, up to 5 passkeys can be bound',
-        passkeyRequireSSL: 'Enable SSL with a trusted certificate and bind a domain name before using passkeys',
+        passkeyRequireSSL: 'Passkeys require a bound domain name and HTTPS access',
+        passkeyTrustedProxies: 'Trusted proxies',
+        passkeyTrustedProxiesHelper:
+            'Only requests from these IP/CIDR sources will trust Forwarded and X-Forwarded-Proto when determining HTTPS',
         passkeyNotSupported: 'Current browser or environment does not support passkeys',
         passkeyCount: 'Bound {0}/{1}',
         passkeyName: 'Name',

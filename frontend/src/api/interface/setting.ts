@@ -33,6 +33,7 @@ export namespace Setting {
         sslType: string;
         allowIPs: string;
         bindDomain: string;
+        passkeyTrustedProxies: string;
         securityEntrance: string;
         dashboardMemoVisible: string;
         dashboardSimpleNodeVisible: string;
@@ -72,6 +73,8 @@ export namespace Setting {
         letterSpacing: string;
         fontSize: string;
         fontFamily: string;
+        backgroundColor: string;
+        foregroundColor: string;
         cursorBlink: string;
         cursorStyle: string;
         scrollback: string;

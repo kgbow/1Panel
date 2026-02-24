@@ -165,7 +165,7 @@ const message = {
             createSuccess: 'Başarıyla oluşturuldu',
             updateSuccess: 'Başarıyla güncellendi',
             uploadSuccess: 'Başarıyla yüklendi',
-            operateConfirm: 'İşlemden eminseniz, lütfen manuel olarak girin : ',
+            operateConfirm: 'İşlemden eminseniz, lütfen manuel olarak girin: ',
             inputOrSelect: 'Lütfen seçin veya girin',
             copyFailed: 'Kopyalama başarısız',
             operatorHelper:
@@ -717,6 +717,8 @@ const message = {
             feishuSaveSuccess: 'Saved successfully',
             pairingCodeRequired: 'Please enter pairing code',
             pairingApproveSuccess: 'Pairing approved successfully',
+            customModelHelper: 'Özel model hesabında model adı custom/ ile başlamalıdır',
+            customProviderHelper: 'Özel model sağlayıcısında hesabın kullanılabilirliği doğrulanmaz',
         },
         model: {
             model: 'Model',
@@ -1376,9 +1378,11 @@ const message = {
         lineHeight: 'Satır Yüksekliği',
         letterSpacing: 'Harf Aralığı',
         fontSize: 'Font Boyutu',
-        fontFamily: 'Özel yazı tipi',
-        fontFamilyHelper:
-            'Varsayılan yazı tiplerini kullanmak için boş bırakın. Özel bir yazı tipi adı girerseniz, yazı tipinin yerel işletim sisteminizde yüklü olduğundan emin olun, aksi takdirde varsayılan yazı tipiyle işlenecektir',
+        fontFamily: 'Yazı tipi kümesi',
+        fontFamilySupportHelper:
+            'Yazı tiplerini seçin veya girin. Etkin olup olmaması, tarayıcının bulunduğu sistemde bu yazı tipinin kurulu olmasına bağlıdır; kurulu değilse otomatik olarak geri dönüş yapılır. Boşsa varsayılan yazı tipi kullanılır.',
+        backgroundColor: 'Arka plan rengi',
+        foregroundColor: 'Ön plan rengi',
         cursorBlink: 'İmleç Yanıp Sönme',
         cursorStyle: 'İmleç Stili',
         cursorUnderline: 'Alt Çizgi',
@@ -2002,9 +2006,13 @@ const message = {
         safe: 'Güvenlik',
         passkey: 'Passkey',
         passkeyManage: 'Yönet',
+        passkeyKeyManagement: 'Anahtar yönetimi',
         passkeyHelper: 'Hızlı giriş için en fazla 5 passkey bağlanabilir',
-        passkeyRequireSSL: 'Passkey kullanmak için güvenilir sertifika ile SSL’yi etkinleştirin ve alan adını bağlayın',
-        passkeyNotSupported: 'Mevcut tarayıcı veya ortam passkey desteklemiyor',
+        passkeyRequireSSL: 'Passkey kullanmak için alan adı bağlayın ve HTTPS erişimi sağlayın',
+        passkeyTrustedProxies: 'Güvenilir proxyler',
+        passkeyTrustedProxiesHelper:
+            'Sadece bu IP/CIDR kaynaklarından gelen isteklerde Forwarded ve X-Forwarded-Proto HTTPS belirlenmesinde kullanılır',
+        passkeyNotSupported: 'Tarayıcı/ortam passkey desteklemiyor; alan adı ve HTTPS erişimini doğrulayın',
         passkeyCount: 'Bağlı {0}/{1}',
         passkeyName: 'Ad',
         passkeyNameHelper: 'Cihazları ayırt etmek için bir ad girin',

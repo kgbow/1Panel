@@ -23,6 +23,7 @@ type SettingInfo struct {
 	SSL                        string `json:"ssl"`
 	SSLType                    string `json:"sslType"`
 	BindDomain                 string `json:"bindDomain"`
+	PasskeyTrustedProxies      string `json:"passkeyTrustedProxies"`
 	AllowIPs                   string `json:"allowIPs"`
 	SecurityEntrance           string `json:"securityEntrance"`
 	DashboardMemoVisible       string `json:"dashboardMemoVisible"`
@@ -227,6 +228,8 @@ type TerminalInfo struct {
 	LetterSpacing     string `json:"letterSpacing"`
 	FontSize          string `json:"fontSize"`
 	FontFamily        string `json:"fontFamily"`
+	BackgroundColor   string `json:"backgroundColor"`
+	ForegroundColor   string `json:"foregroundColor"`
 	CursorBlink       string `json:"cursorBlink"`
 	CursorStyle       string `json:"cursorStyle"`
 	Scrollback        string `json:"scrollback"`

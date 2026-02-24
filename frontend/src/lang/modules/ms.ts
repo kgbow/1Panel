@@ -710,6 +710,8 @@ const message = {
             feishuSaveSuccess: 'Saved successfully',
             pairingCodeRequired: 'Please enter pairing code',
             pairingApproveSuccess: 'Pairing approved successfully',
+            customModelHelper: 'Akaun model tersuai, nama model mesti bermula dengan custom/',
+            customProviderHelper: 'Penyedia model tersuai tidak mengesahkan sama ada akaun boleh digunakan',
         },
         model: {
             model: 'Model',
@@ -1353,9 +1355,22 @@ const message = {
         key: 'Kunci peribadi',
         keyPassword: 'Kata laluan kunci peribadi',
         emptyTerminal: 'Tiada terminal yang sedang disambungkan.',
-        fontFamily: 'Fon tersuai',
-        fontFamilyHelper:
-            'Biarkan kosong untuk menggunakan fon lalai. Jika anda memasukkan nama fon tersuai, pastikan fon tersebut dipasang pada sistem operasi tempatan anda, jika tidak ia akan dipaparkan dengan fon lalai',
+        lineHeight: 'Ketinggian baris',
+        letterSpacing: 'Jarak huruf',
+        fontSize: 'Saiz fon',
+        fontFamily: 'Set fon',
+        fontFamilySupportHelper:
+            'Pilih atau masukkan fon. Sama ada berkesan bergantung pada sama ada fon tersebut dipasang pada sistem pelayar; jika tiada, ia akan fallback secara automatik. Jika kosong, fon lalai akan digunakan.',
+        backgroundColor: 'Warna latar belakang',
+        foregroundColor: 'Warna teks',
+        cursorBlink: 'Kedipan kursor',
+        cursorStyle: 'Gaya kursor',
+        cursorUnderline: 'Garis bawah',
+        cursorBlock: 'Blok',
+        cursorBar: 'Bar',
+        scrollback: 'Skrol balik',
+        scrollSensitivity: 'Kepekaan skrol',
+        saveHelper: 'Adakah anda pasti mahu menyimpan konfigurasi terminal semasa?',
     },
     toolbox: {
         common: {
@@ -1616,10 +1631,10 @@ const message = {
         changeOwner: 'Ubah suai pengguna dan kumpulan pengguna',
         containSub: 'Guna perubahan kebenaran secara rekursif',
         ownerHelper:
-            'Pengguna lalai persekitaran operasi PHP: kumpulan pengguna adalah 1000:1000, adalah normal jika pengguna di dalam dan di luar kontena menunjukkan ketidakkonsistenan',
+            'Pengguna lalai persekitaran operasi PHP: kumpulan pengguna adalah 1000:1000, dan adalah normal jika pengguna di dalam dan di luar kontena menunjukkan ketidakkonsistenan',
         searchHelper: 'Sokong wildcard seperti *',
         uploadFailed: '[{0}] Gagal memuat naik fail',
-        fileUploadStart: 'Memuat naik [{0}]....',
+        fileUploadStart: 'Memuat naik [{0}]...',
         currentSelect: 'Pilihan semasa: ',
         unsupportedType: 'Jenis fail tidak disokong',
         deleteHelper:
@@ -1961,8 +1976,12 @@ const message = {
         safe: 'Keselamatan',
         passkey: 'Passkey',
         passkeyManage: 'Urus',
+        passkeyKeyManagement: 'Pengurusan kunci',
         passkeyHelper: 'Untuk log masuk pantas, maksimum 5 passkey boleh dipautkan',
-        passkeyRequireSSL: 'Aktifkan SSL dengan sijil dipercayai dan ikat nama domain untuk menggunakan passkey',
+        passkeyRequireSSL: 'Passkey memerlukan nama domain terikat dan akses HTTPS',
+        passkeyTrustedProxies: 'Proksi dipercayai',
+        passkeyTrustedProxiesHelper:
+            'Hanya permintaan daripada IP/CIDR ini akan mempercayai Forwarded dan X-Forwarded-Proto untuk menentukan HTTPS',
         passkeyNotSupported: 'Pelayar atau persekitaran semasa tidak menyokong passkey',
         passkeyCount: 'Dipaut {0}/{1}',
         passkeyName: 'Nama',

@@ -16,6 +16,7 @@ func Init() {
 		migrations.InitTerminalSetting,
 		migrations.AddTaskDB,
 		migrations.AddPasskeySetting,
+		migrations.AddPasskeyTrustedProxySetting,
 		migrations.AddXpackHideMenu,
 		migrations.UpdateXpackHideMenu,
 		migrations.UpdateOnedrive,
@@ -31,7 +32,6 @@ func Init() {
 		migrations.AdjustXpackNode,
 		migrations.UpdateAiAgentsMenu,
 		migrations.AddDashboardCarouselSetting,
-		migrations.AddTerminalFontFamily,
 	})
 	if err := m.Migrate(); err != nil {
 		global.LOG.Error(err)

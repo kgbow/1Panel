@@ -283,9 +283,6 @@ func (u *SettingService) UpdateSSL(c *gin.Context, req dto.SSLUpdate) error {
 		if err := settingRepo.Update("SSLType", "self"); err != nil {
 			return err
 		}
-		if err := u.clearPasskeySettings(); err != nil {
-			return err
-		}
 		_ = os.Remove(path.Join(secretDir, "server.crt"))
 		_ = os.Remove(path.Join(secretDir, "server.key"))
 		go func() {
@@ -389,9 +386,6 @@ func (u *SettingService) UpdateSSL(c *gin.Context, req dto.SSLUpdate) error {
 		}()
 	}
 	if err := settingRepo.Update("SSL", req.SSL); err != nil {
-		return err
-	}
-	if err := u.clearPasskeySettings(); err != nil {
 		return err
 	}
 	return u.UpdateSystemSSL()
@@ -500,13 +494,13 @@ func (u *SettingService) GetTerminalInfo() (*dto.TerminalInfo, error) {
 	return &info, err
 }
 func (u *SettingService) UpdateTerminal(req dto.TerminalInfo) error {
-	if err := settingRepo.Update("LineHeight", req.LineHeight); err != nil {
+	if err := settingRepo.UpdateOrCreate("LineHeight", req.LineHeight); err != nil {
 		return err
 	}
-	if err := settingRepo.Update("LetterSpacing", req.LetterSpacing); err != nil {
+	if err := settingRepo.UpdateOrCreate("LetterSpacing", req.LetterSpacing); err != nil {
 		return err
 	}
-	if err := settingRepo.Update("FontSize", req.FontSize); err != nil {
+	if err := settingRepo.UpdateOrCreate("FontSize", req.FontSize); err != nil {
 		return err
 	}
 	if err := settingRepo.Update("FontFamily", req.FontFamily); err != nil {
@@ -515,13 +509,22 @@ func (u *SettingService) UpdateTerminal(req dto.TerminalInfo) error {
 	if err := settingRepo.Update("CursorBlink", req.CursorBlink); err != nil {
 		return err
 	}
-	if err := settingRepo.Update("CursorStyle", req.CursorStyle); err != nil {
+	if err := settingRepo.UpdateOrCreate("BackgroundColor", req.BackgroundColor); err != nil {
 		return err
 	}
-	if err := settingRepo.Update("Scrollback", req.Scrollback); err != nil {
+	if err := settingRepo.UpdateOrCreate("ForegroundColor", req.ForegroundColor); err != nil {
 		return err
 	}
-	if err := settingRepo.Update("ScrollSensitivity", req.ScrollSensitivity); err != nil {
+	if err := settingRepo.UpdateOrCreate("CursorBlink", req.CursorBlink); err != nil {
+		return err
+	}
+	if err := settingRepo.UpdateOrCreate("CursorStyle", req.CursorStyle); err != nil {
+		return err
+	}
+	if err := settingRepo.UpdateOrCreate("Scrollback", req.Scrollback); err != nil {
+		return err
+	}
+	if err := settingRepo.UpdateOrCreate("ScrollSensitivity", req.ScrollSensitivity); err != nil {
 		return err
 	}
 	return nil

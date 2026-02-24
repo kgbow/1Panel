@@ -709,6 +709,8 @@ const message = {
             feishuSaveSuccess: 'Saved successfully',
             pairingCodeRequired: 'Please enter pairing code',
             pairingApproveSuccess: 'Pairing approved successfully',
+            customModelHelper: 'En la cuenta de modelo personalizada, el nombre del modelo debe empezar por custom/',
+            customProviderHelper: 'En el proveedor de modelo personalizado no se valida si la cuenta está disponible',
         },
         model: {
             model: 'Modelo',
@@ -1374,9 +1376,11 @@ const message = {
         lineHeight: 'Altura de línea',
         letterSpacing: 'Espaciado de letras',
         fontSize: 'Tamaño de fuente',
-        fontFamily: 'Fuente personalizada',
-        fontFamilyHelper:
-            'Dejar vacío para usar fuentes predeterminadas. Si ingresa un nombre de fuente personalizado, asegúrese de que la fuente esté instalada en su sistema operativo local, de lo contrario se renderizará con la fuente predeterminada',
+        fontFamily: 'Conjunto de fuentes',
+        fontFamilySupportHelper:
+            'Seleccione o introduzca fuentes. El efecto depende de si el sistema del navegador tiene instalada la fuente; si no, se usará una de respaldo. Si queda vacío, se usará la fuente predeterminada.',
+        backgroundColor: 'Color de fondo',
+        foregroundColor: 'Color de primer plano',
         cursorBlink: 'Parpadeo del cursor',
         cursorStyle: 'Estilo de cursor',
         cursorUnderline: 'Subrayado',
@@ -1633,8 +1637,8 @@ const message = {
             'El usuario predeterminado del entorno PHP: el grupo es 1000:1000, es normal que haya diferencias entre usuario dentro y fuera del contenedor',
         searchHelper: 'Soporta comodines como *',
         uploadFailed: '[{0}] Fallo en la carga del archivo',
-        fileUploadStart: 'Cargando [{0}]....',
-        currentSelect: 'Seleccionado: ',
+        fileUploadStart: 'Cargando [{0}]...',
+        currentSelect: 'Selección actual: ',
         unsupportedType: 'Tipo de archivo no soportado',
         deleteHelper: '¿Está seguro de eliminar los siguientes archivos? Por defecto irán a la papelera de reciclaje.',
         fileHelper:
@@ -1995,8 +1999,12 @@ const message = {
         safe: 'Seguridad',
         passkey: 'Passkey',
         passkeyManage: 'Administrar',
+        passkeyKeyManagement: 'Gestión de claves',
         passkeyHelper: 'Para inicio rápido, se pueden vincular hasta 5 passkeys',
-        passkeyRequireSSL: 'Activa SSL con un certificado de confianza y vincula un dominio para usar passkeys',
+        passkeyRequireSSL: 'Los passkeys requieren un dominio vinculado y acceso por HTTPS',
+        passkeyTrustedProxies: 'Proxies confiables',
+        passkeyTrustedProxiesHelper:
+            'Solo las solicitudes desde estas IP/CIDR confiarán en Forwarded y X-Forwarded-Proto para detectar HTTPS',
         passkeyNotSupported: 'El navegador o entorno actual no admite passkeys',
         passkeyCount: 'Vinculadas {0}/{1}',
         passkeyName: 'Nombre',
